@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer';
 import myLogger from "../winstonLog/winston.js";
 
 
-export async function sendMail(fullname, phone, address, role, username, dob, email, code) {
+export async function sendMail(fullname, phone, address, role, username, dob, email) {
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 587,
@@ -25,7 +25,6 @@ export async function sendMail(fullname, phone, address, role, username, dob, em
         SĐT: ${phone},
         Địa chỉ: ${address},
         Chức vụ: ${role},
-        Mã nhân viên: ${code}
         Username: ${username},
         Password: abc@123,
         Ngày sinh: ${dob},
