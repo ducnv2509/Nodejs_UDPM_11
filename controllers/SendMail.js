@@ -7,8 +7,8 @@ export async function sendMail(fullname, phone, address, role, username, dob, em
         host: 'smtp.gmail.com',
         port: 587,
         auth: {
-            user: process.env.eEmail,
-            pass: process.env.epassword
+            user: process.env.UDPM11_eEmail,
+            pass: process.env.UDPM11_epassword
         }
     });
     myLogger.info(email)
